@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Let's Play</title>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="scorecontainer">
+            <span class="text">
+                Rock Paper Scissor
+            </span>
+            <span class="score">
+                <div class="score-text">Score</div>
+                <div id="score-number">0</div>
+            </span>
+        </div>
+
+        <button id="reset" onclick="preset()">Reset</button>
+        <button id="Next" onclick="newgame()">HI-LO</button>
+
+        <div id="RockPaperScissors">
+
+            <div id="selection">
+                <button id="Scissor" value=0 onclick="calculateScore(value)"><img id="img1" src="scissors.png"
+                        alt=""></button>
+                <button id="Paper" value=1 onclick="calculateScore(value)"><img id="img2" src="paper.png"
+                        alt=""></button>
+                <button id="Stone" value=2 onclick="calculateScore(value)"><img id="img3" src="fist.png"
+                        alt=""></button>
+            </div>
+
+            <div id="result">
+
+                <button id="choice"><img id="01" src="fist.png" alt=""></button>
+
+                <div id="resultOpt">
+                    <p id="resultText">YOU WIN!!</p>
+                    <button id="playagain" onclick="back()">Play Again</button>
+                </div>
+
+                <button id="rando"><img id="02" src="fist.png" alt=""></button>
+
+            </div>
+        </div>
+
+        <div id="HI-LO">
+            <div class="game">
+                <div id="card1">
+                    <div id="txtcard1"></div>
+                </div>
+                <div id="selecbutton">
+                    <p id="win2"></p>
+                    <button id="play" onclick="turncard1()">PLAY</button>
+                    <button id="playag" onclick="playag()">PLAY AGAIN</button>
+                    <button id="high" onclick="turncard2()">HIGH</button>
+                    <button id="low" onclick="turncard3()">LOW</button>
+                </div>
+                <div id="card2">
+                    <div id="txtcard2"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>
